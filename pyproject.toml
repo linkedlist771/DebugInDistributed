@@ -15,3 +15,4 @@ dependencies = [
 
 [tool.pyright]
 reportPrivateImportUsage = "none"
+reportIncompatibleMethodOverride = "none"
