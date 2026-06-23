@@ -1,0 +1,10 @@
+WARNING: The version of the system or its configuration does not allow enabling CPU profiling:
+- CPU IP/backtrace sampling will be disabled.
+- CPU context switch tracing will be disabled.
+Try the 'nsys status --environment' command to learn more.
+
+Collecting data...
+Generating '/tmp/nsys-report-497a.qdstrm'
+[1/1] [0%                          ] run_C_eager.nsys-rep[1/1] [0%                          ] run_C_eager.nsys-rep[1/1] [==20%                       ] run_C_eager.nsys-rep[1/1] [========40%                 ] run_C_eager.nsys-rep[1/1] [========41%                 ] run_C_eager.nsys-rep[1/1] [========42%                 ] run_C_eager.nsys-rep[1/1] [================71%         ] run_C_eager.nsys-rep[1/1] [========================100%] run_C_eager.nsys-rep[1/1] [========================100%] run_C_eager.nsys-rep
+Generated:
+	/home/ljj/Desktop/dingli/DebugInDistributed/cudagraph_examples/cuda_graph_profiler_exp/nsys/raw_tmp/run_C_eager.nsys-rep

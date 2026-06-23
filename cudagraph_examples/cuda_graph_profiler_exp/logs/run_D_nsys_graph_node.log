@@ -1,0 +1,10 @@
+WARNING: The version of the system or its configuration does not allow enabling CPU profiling:
+- CPU IP/backtrace sampling will be disabled.
+- CPU context switch tracing will be disabled.
+Try the 'nsys status --environment' command to learn more.
+
+Collecting data...
+Generating '/tmp/nsys-report-8b09.qdstrm'
+[1/1] [0%                          ] run_D_graph_node.nsys-rep[1/1] [0%                          ] run_D_graph_node.nsys-rep[1/1] [==18%                       ] run_D_graph_node.nsys-rep[1/1] [=======36%                  ] run_D_graph_node.nsys-rep[1/1] [=======37%                  ] run_D_graph_node.nsys-rep[1/1] [================68%         ] run_D_graph_node.nsys-rep[1/1] [========================100%] run_D_graph_node.nsys-rep[1/1] [========================100%] run_D_graph_node.nsys-rep
+Generated:
+	/home/ljj/Desktop/dingli/DebugInDistributed/cudagraph_examples/cuda_graph_profiler_exp/nsys/raw_tmp/run_D_graph_node.nsys-rep

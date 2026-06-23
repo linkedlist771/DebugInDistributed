@@ -1,0 +1,114 @@
+{
+  "csv_rows_in_window": 11,
+  "csv_total_rows": 295,
+  "cudaGraphLaunch_runtime_count": 0,
+  "cudaLaunchKernel_runtime_count": 11,
+  "cuda_graph_events_start_in_window": null,
+  "cuda_graph_node_events_overlap_window": null,
+  "cuda_graph_node_events_start_in_window": null,
+  "cuda_graph_trace_events_overlap_window": null,
+  "cuda_graph_trace_events_start_in_window": null,
+  "graph_internal_kernel_count_in_window": 0,
+  "graph_internal_kernel_top_names_in_window": [],
+  "graph_launch_corr_ids": [],
+  "host_kernel_count_in_window": 11,
+  "host_kernel_top_names_in_window": [
+    [
+      "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4>(T1::Params)",
+      2
+    ],
+    [
+      "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4>(T1::Params)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase &, at::native::GeluType)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 2)]::operator ()() const::[lambda(float) (instance 1)], at::detail::Array<char *, (int)2>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, const T1 *, const T1 *, const T1 *, T2 *, T2 *, T1 *)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::sin_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 2)]::operator ()() const::[lambda(float) (instance 1)], at::detail::Array<char *, (int)2>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::tanh_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 2)]::operator ()() const::[lambda(float) (instance 1)], at::detail::Array<char *, (int)2>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float>>, at::detail::Array<char *, (int)3>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, (int)4>>(T3)",
+      1
+    ],
+    [
+      "void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<float>, at::detail::Array<char *, (int)3>>(int, T2, T3)",
+      1
+    ]
+  ],
+  "kernel_count_in_window": 11,
+  "kernel_top_names_in_window": [
+    [
+      "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4>(T1::Params)",
+      2
+    ],
+    [
+      "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4>(T1::Params)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase &, at::native::GeluType)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 2)]::operator ()() const::[lambda(float) (instance 1)], at::detail::Array<char *, (int)2>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::<unnamed>::vectorized_layer_norm_kernel<float, float>(int, T2, const T1 *, const T1 *, const T1 *, T2 *, T2 *, T1 *)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::sin_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 2)]::operator ()() const::[lambda(float) (instance 1)], at::detail::Array<char *, (int)2>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::tanh_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 2)]::operator ()() const::[lambda(float) (instance 1)], at::detail::Array<char *, (int)2>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float>>, at::detail::Array<char *, (int)3>>(int, T2, T3)",
+      1
+    ],
+    [
+      "void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, (int)4>>(T3)",
+      1
+    ],
+    [
+      "void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<float>, at::detail::Array<char *, (int)3>>(int, T2, T3)",
+      1
+    ]
+  ],
+  "runtime_top_names_in_window": [
+    [
+      "cudaLaunchKernel_v7000",
+      11
+    ],
+    [
+      "cudaDeviceSynchronize_v3020",
+      1
+    ]
+  ],
+  "window_duration_ns": 288773,
+  "window_end_ns": 965186034,
+  "window_label": "PLAIN_ITER_0",
+  "window_start_ns": 964897261
+}

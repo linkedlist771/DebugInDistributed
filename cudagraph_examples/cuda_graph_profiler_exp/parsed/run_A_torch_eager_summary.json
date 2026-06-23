@@ -1,0 +1,495 @@
+{
+  "aten_names": [
+    [
+      "aten::empty",
+      6
+    ],
+    [
+      "aten::linear",
+      3
+    ],
+    [
+      "aten::t",
+      3
+    ],
+    [
+      "aten::transpose",
+      3
+    ],
+    [
+      "aten::as_strided",
+      3
+    ],
+    [
+      "aten::addmm",
+      3
+    ],
+    [
+      "aten::view",
+      2
+    ],
+    [
+      "aten::add",
+      2
+    ],
+    [
+      "aten::gelu",
+      1
+    ],
+    [
+      "aten::layer_norm",
+      1
+    ],
+    [
+      "aten::native_layer_norm",
+      1
+    ],
+    [
+      "aten::sin",
+      1
+    ],
+    [
+      "aten::tanh",
+      1
+    ],
+    [
+      "aten::mul",
+      1
+    ],
+    [
+      "aten::mean",
+      1
+    ]
+  ],
+  "aten_op_count": 32,
+  "cudaGraphLaunch_count": 0,
+  "cudaLaunchKernel_count": 11,
+  "device_kernel_count": 11,
+  "kernel_correlation_id_coverage": 1.0,
+  "kernel_external_id_coverage": 1.0,
+  "kernel_launch_correlation_coverage": 1.0,
+  "kernel_launch_inside_aten_coverage": 1.0,
+  "kernel_names": [
+    [
+      "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4>(cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4::Params)",
+      2
+    ],
+    [
+      "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4>(cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4::Params)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",
+      1
+    ],
+    [
+      "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<float, float>(int, float, float const*, float const*, float const*, float*, float*, float*)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<4, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<4, at::native::tanh_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::tanh_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",
+      1
+    ],
+    [
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float>, unsigned int, float, 4>)",
+      1
+    ],
+    [
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",
+      1
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",
+      1
+    ]
+  ],
+  "kernel_parent_link_coverage": 0.0,
+  "kernel_to_aten_names": [
+    [
+      "aten::addmm",
+      3
+    ],
+    [
+      "aten::add",
+      2
+    ],
+    [
+      "aten::gelu",
+      1
+    ],
+    [
+      "aten::native_layer_norm",
+      1
+    ],
+    [
+      "aten::sin",
+      1
+    ],
+    [
+      "aten::tanh",
+      1
+    ],
+    [
+      "aten::mul",
+      1
+    ],
+    [
+      "aten::mean",
+      1
+    ]
+  ],
+  "kernels_with_correlation_id": 11,
+  "kernels_with_external_id": 11,
+  "kernels_with_launch_correlation": 11,
+  "kernels_with_launch_inside_aten": 11,
+  "kernels_with_parent_external_id": 0,
+  "launch_api_count": 11,
+  "launch_names": [
+    [
+      "cudaLaunchKernel",
+      11
+    ]
+  ],
+  "sample_kernel_args": [
+    {
+      "args": {
+        "External id": 18,
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "blocks per SM": 0.5,
+        "context": 1,
+        "correlation": 18,
+        "device": 0,
+        "est. achieved occupancy %": 0,
+        "grid": [
+          32,
+          2,
+          1
+        ],
+        "queued": 0,
+        "registers per thread": 152,
+        "shared memory": 73728,
+        "stream": 7,
+        "warps per SM": 2
+      },
+      "cat": "kernel",
+      "name": "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4>(cutlass_80_tensorop_s1688gemm_128x64_16x6_tn_align4::Params)"
+    },
+    {
+      "args": {
+        "External id": 26,
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "blocks per SM": 8,
+        "context": 1,
+        "correlation": 26,
+        "device": 0,
+        "est. achieved occupancy %": 67,
+        "grid": [
+          1024,
+          1,
+          1
+        ],
+        "queued": 0,
+        "registers per thread": 30,
+        "shared memory": 0,
+        "stream": 7,
+        "warps per SM": 32
+      },
+      "cat": "kernel",
+      "name": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)"
+    },
+    {
+      "args": {
+        "External id": 46,
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "blocks per SM": 0.5,
+        "context": 1,
+        "correlation": 46,
+        "device": 0,
+        "est. achieved occupancy %": 0,
+        "grid": [
+          32,
+          2,
+          1
+        ],
+        "queued": 0,
+        "registers per thread": 96,
+        "shared memory": 98304,
+        "stream": 7,
+        "warps per SM": 2
+      },
+      "cat": "kernel",
+      "name": "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4>(cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4::Params)"
+    },
+    {
+      "args": {
+        "External id": 68,
+        "block": [
+          32,
+          4,
+          1
+        ],
+        "blocks per SM": 2,
+        "context": 1,
+        "correlation": 68,
+        "device": 0,
+        "est. achieved occupancy %": 17,
+        "grid": [
+          256,
+          1,
+          1
+        ],
+        "queued": 0,
+        "registers per thread": 43,
+        "shared memory": 24,
+        "stream": 7,
+        "warps per SM": 8
+      },
+      "cat": "kernel",
+      "name": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<float, float>(int, float, float const*, float const*, float const*, float*, float*, float*)"
+    },
+    {
+      "args": {
+        "External id": 76,
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "blocks per SM": 4,
+        "context": 1,
+        "correlation": 76,
+        "device": 0,
+        "est. achieved occupancy %": 33,
+        "grid": [
+          512,
+          1,
+          1
+        ],
+        "queued": 0,
+        "registers per thread": 30,
+        "shared memory": 0,
+        "stream": 7,
+        "warps per SM": 16
+      },
+      "cat": "kernel",
+      "name": "void at::native::vectorized_elementwise_kernel<4, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)"
+    }
+  ],
+  "sample_launch_args": [
+    {
+      "args": {
+        "External id": 18,
+        "cbid": 211,
+        "correlation": 18
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 26,
+        "cbid": 211,
+        "correlation": 26
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 46,
+        "cbid": 211,
+        "correlation": 46
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 68,
+        "cbid": 211,
+        "correlation": 68
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 76,
+        "cbid": 211,
+        "correlation": 76
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    }
+  ],
+  "top_categories": [
+    [
+      "python_function",
+      53
+    ],
+    [
+      "cpu_op",
+      32
+    ],
+    [
+      "cuda_runtime",
+      20
+    ],
+    [
+      "kernel",
+      11
+    ],
+    [
+      "user_annotation",
+      1
+    ]
+  ],
+  "top_names": [
+    [
+      "torch/nn/modules/module.py(1601): __getattr__",
+      12
+    ],
+    [
+      "cudaLaunchKernel",
+      11
+    ],
+    [
+      "aten::empty",
+      6
+    ],
+    [
+      "cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags",
+      6
+    ],
+    [
+      "<built-in method _get_tracing_state of PyCapsule object at 0x7f0f877d1960>",
+      5
+    ],
+    [
+      "aten::linear",
+      3
+    ],
+    [
+      "aten::t",
+      3
+    ],
+    [
+      "aten::transpose",
+      3
+    ],
+    [
+      "aten::as_strided",
+      3
+    ],
+    [
+      "aten::addmm",
+      3
+    ],
+    [
+      "torch/nn/modules/linear.py(113): forward",
+      3
+    ],
+    [
+      "<built-in function linear>",
+      3
+    ],
+    [
+      "cudaFuncSetAttribute",
+      3
+    ],
+    [
+      "aten::view",
+      2
+    ],
+    [
+      "aten::add",
+      2
+    ],
+    [
+      "void cutlass::Kernel<cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4>(cutlass_80_tensorop_s1688gemm_64x64_32x6_tn_align4::Params)",
+      2
+    ],
+    [
+      "PROFILE_ITER_0",
+      1
+    ],
+    [
+      "aten::gelu",
+      1
+    ],
+    [
+      "aten::layer_norm",
+      1
+    ],
+    [
+      "aten::native_layer_norm",
+      1
+    ],
+    [
+      "aten::sin",
+      1
+    ],
+    [
+      "aten::tanh",
+      1
+    ],
+    [
+      "aten::mul",
+      1
+    ],
+    [
+      "aten::mean",
+      1
+    ],
+    [
+      "harness.py(67): eager_iter",
+      1
+    ],
+    [
+      "nn.Module: GraphedToyModel_0",
+      1
+    ],
+    [
+      "harness.py(32): forward",
+      1
+    ],
+    [
+      "nn.Module: Linear_0",
+      1
+    ],
+    [
+      "<built-in function gelu>",
+      1
+    ],
+    [
+      "nn.Module: Linear_1",
+      1
+    ]
+  ],
+  "total_complete_events_in_window": 117,
+  "unique_cpu_external_id_count": 32,
+  "window_duration_us": 2194.0,
+  "window_end": 1782182620423042.0,
+  "window_label": "PROFILE_ITER_0",
+  "window_ts": 1782182620420848.0
+}

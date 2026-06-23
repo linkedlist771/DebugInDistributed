@@ -1,0 +1,21 @@
+{
+  "args": {
+    "batch": 256,
+    "bench_iters": 300,
+    "graph": true,
+    "hidden": 1024,
+    "iters": 1,
+    "latency_json": null,
+    "metadata_path": "cuda_graph_profiler_exp/metadata/run_B.json",
+    "mode": "run",
+    "profiler": true,
+    "trace_path": "cuda_graph_profiler_exp/traces/run_B_torch_graph.json",
+    "warmup": 25
+  },
+  "cuda_available": true,
+  "device": "NVIDIA GeForce RTX 4090",
+  "pid": 1643127,
+  "seed": 20260623,
+  "torch_cuda": "11.8",
+  "torch_version": "2.0.0+cu118"
+}

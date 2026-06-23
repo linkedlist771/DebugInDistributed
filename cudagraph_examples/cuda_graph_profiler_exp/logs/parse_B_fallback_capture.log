@@ -1,0 +1,327 @@
+{
+  "aten_names": [
+    [
+      "aten::empty",
+      8
+    ],
+    [
+      "aten::linear",
+      3
+    ],
+    [
+      "aten::t",
+      3
+    ],
+    [
+      "aten::transpose",
+      3
+    ],
+    [
+      "aten::as_strided",
+      3
+    ],
+    [
+      "aten::addmm",
+      3
+    ],
+    [
+      "aten::view",
+      2
+    ],
+    [
+      "aten::add",
+      2
+    ],
+    [
+      "aten::fill_",
+      1
+    ],
+    [
+      "aten::gelu",
+      1
+    ],
+    [
+      "aten::layer_norm",
+      1
+    ],
+    [
+      "aten::native_layer_norm",
+      1
+    ],
+    [
+      "aten::sin",
+      1
+    ],
+    [
+      "aten::tanh",
+      1
+    ],
+    [
+      "aten::mul",
+      1
+    ],
+    [
+      "aten::mean",
+      1
+    ]
+  ],
+  "aten_op_count": 35,
+  "cudaGraphLaunch_count": 0,
+  "cudaLaunchKernel_count": 12,
+  "device_kernel_count": 1,
+  "kernel_correlation_id_coverage": 1.0,
+  "kernel_external_id_coverage": 1.0,
+  "kernel_launch_correlation_coverage": 1.0,
+  "kernel_launch_inside_aten_coverage": 1.0,
+  "kernel_names": [
+    [
+      "void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<long>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<long>, at::detail::Array<char*, 1>)",
+      1
+    ]
+  ],
+  "kernel_parent_link_coverage": 0.0,
+  "kernel_to_aten_names": [
+    [
+      "aten::fill_",
+      1
+    ]
+  ],
+  "kernels_with_correlation_id": 1,
+  "kernels_with_external_id": 1,
+  "kernels_with_launch_correlation": 1,
+  "kernels_with_launch_inside_aten": 1,
+  "kernels_with_parent_external_id": 0,
+  "launch_api_count": 12,
+  "launch_names": [
+    [
+      "cudaLaunchKernel",
+      12
+    ]
+  ],
+  "sample_kernel_args": [
+    {
+      "args": {
+        "External id": 37,
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "blocks per SM": 0.0078125,
+        "context": 1,
+        "correlation": 37,
+        "device": 0,
+        "est. achieved occupancy %": 0,
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "queued": 0,
+        "registers per thread": 16,
+        "shared memory": 0,
+        "stream": 15,
+        "warps per SM": 0.03125
+      },
+      "cat": "kernel",
+      "name": "void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<long>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<long>, at::detail::Array<char*, 1>)"
+    }
+  ],
+  "sample_launch_args": [
+    {
+      "args": {
+        "External id": 37,
+        "cbid": 211,
+        "correlation": 37
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 79,
+        "cbid": 211,
+        "correlation": 79
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 88,
+        "cbid": 211,
+        "correlation": 88
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 110,
+        "cbid": 211,
+        "correlation": 110
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    },
+    {
+      "args": {
+        "External id": 141,
+        "cbid": 211,
+        "correlation": 141
+      },
+      "cat": "cuda_runtime",
+      "name": "cudaLaunchKernel"
+    }
+  ],
+  "top_categories": [
+    [
+      "python_function",
+      188
+    ],
+    [
+      "cuda_runtime",
+      78
+    ],
+    [
+      "cpu_op",
+      35
+    ],
+    [
+      "user_annotation",
+      1
+    ],
+    [
+      "kernel",
+      1
+    ]
+  ],
+  "top_names": [
+    [
+      "<built-in function isinstance>",
+      24
+    ],
+    [
+      "cudaStreamGetCaptureInfo",
+      18
+    ],
+    [
+      "torch/nn/modules/module.py(1601): __getattr__",
+      12
+    ],
+    [
+      "cudaLaunchKernel",
+      12
+    ],
+    [
+      "cudaThreadExchangeStreamCaptureMode",
+      12
+    ],
+    [
+      "torch/_jit_internal.py(1102): is_scripting",
+      10
+    ],
+    [
+      "aten::empty",
+      8
+    ],
+    [
+      "cudaStreamIsCapturing",
+      8
+    ],
+    [
+      "cudaMalloc",
+      7
+    ],
+    [
+      "torch/cuda/__init__.py(176): is_initialized",
+      6
+    ],
+    [
+      "<built-in function _cuda_isInBadFork>",
+      6
+    ],
+    [
+      "cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags",
+      6
+    ],
+    [
+      "torch/cuda/__init__.py(219): _lazy_init",
+      5
+    ],
+    [
+      "<built-in method _get_tracing_state of PyCapsule object at 0x7f5fda0dac30>",
+      5
+    ],
+    [
+      "cudaFree",
+      5
+    ],
+    [
+      "aten::linear",
+      3
+    ],
+    [
+      "aten::t",
+      3
+    ],
+    [
+      "aten::transpose",
+      3
+    ],
+    [
+      "aten::as_strided",
+      3
+    ],
+    [
+      "aten::addmm",
+      3
+    ],
+    [
+      "torch/cuda/_utils.py(7): _get_device_index",
+      3
+    ],
+    [
+      "torch/_utils.py(692): _get_device_index",
+      3
+    ],
+    [
+      "torch/_utils.py(666): _get_current_device_index",
+      3
+    ],
+    [
+      "torch/_utils.py(656): _get_device_attr",
+      3
+    ],
+    [
+      "torch/_utils.py(647): _get_available_device_type",
+      3
+    ],
+    [
+      "torch/cuda/__init__.py(94): is_available",
+      3
+    ],
+    [
+      "torch/cuda/__init__.py(87): _is_compiled",
+      3
+    ],
+    [
+      "<built-in function hasattr>",
+      3
+    ],
+    [
+      "torch/cuda/__init__.py(91): _nvml_based_avail",
+      3
+    ],
+    [
+      "os.py(771): getenv",
+      3
+    ]
+  ],
+  "total_complete_events_in_window": 303,
+  "unique_cpu_external_id_count": 35,
+  "window_duration_us": 17746.0,
+  "window_end": 1782182855107360.0,
+  "window_label": "PROFILE_ITER_0",
+  "window_ts": 1782182855089614.0
+}

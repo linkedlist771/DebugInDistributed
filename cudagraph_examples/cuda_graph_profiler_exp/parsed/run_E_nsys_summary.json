@@ -1,0 +1,110 @@
+{
+  "graph_tables": [
+    {
+      "count": 4,
+      "table": "CUDA_GRAPH_EVENTS"
+    },
+    {
+      "count": 26,
+      "table": "CUPTI_ACTIVITY_KIND_GRAPH_TRACE"
+    }
+  ],
+  "kernel_tables": [
+    {
+      "count": 329,
+      "table": "CUPTI_ACTIVITY_KIND_KERNEL",
+      "top_names": [
+        [
+          "vectorized_elementwise_kernel",
+          178
+        ],
+        [
+          "Kernel",
+          75
+        ],
+        [
+          "vectorized_layer_norm_kernel",
+          25
+        ],
+        [
+          "reduce_kernel",
+          25
+        ],
+        [
+          "elementwise_kernel",
+          25
+        ],
+        [
+          "distribution_elementwise_grid_stride_kernel",
+          1
+        ]
+      ]
+    },
+    {
+      "count": 4,
+      "table": "ENUM_CUDA_KERNEL_LAUNCH_TYPE",
+      "top_names": []
+    }
+  ],
+  "runtime_tables": [],
+  "sqlite": "cuda_graph_profiler_exp/nsys/raw_tmp/run_E_graph_default.sqlite",
+  "tables": [
+    "ANALYSIS_DETAILS",
+    "ANALYSIS_FILE",
+    "CUDA_GRAPH_EVENTS",
+    "CUPTI_ACTIVITY_KIND_CUDA_EVENT",
+    "CUPTI_ACTIVITY_KIND_GRAPH_TRACE",
+    "CUPTI_ACTIVITY_KIND_KERNEL",
+    "CUPTI_ACTIVITY_KIND_MEMCPY",
+    "CUPTI_ACTIVITY_KIND_OVERHEAD",
+    "CUPTI_ACTIVITY_KIND_RUNTIME",
+    "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION",
+    "DIAGNOSTIC_EVENT",
+    "ENUM_CUDA_DEV_MEM_EVENT_OPER",
+    "ENUM_CUDA_FUNC_CACHE_CONFIG",
+    "ENUM_CUDA_KERNEL_LAUNCH_TYPE",
+    "ENUM_CUDA_MEMCPY_OPER",
+    "ENUM_CUDA_MEMPOOL_OPER",
+    "ENUM_CUDA_MEMPOOL_TYPE",
+    "ENUM_CUDA_MEM_KIND",
+    "ENUM_CUDA_SHARED_MEM_LIMIT_CONFIG",
+    "ENUM_CUDA_UNIF_MEM_ACCESS_TYPE",
+    "ENUM_CUDA_UNIF_MEM_MIGRATION",
+    "ENUM_CUPTI_OVERHEAD_TYPE",
+    "ENUM_CUPTI_STREAM_TYPE",
+    "ENUM_CUPTI_SYNC_TYPE",
+    "ENUM_DIAGNOSTIC_SEVERITY_LEVEL",
+    "ENUM_DIAGNOSTIC_SOURCE_TYPE",
+    "ENUM_DIAGNOSTIC_TIMESTAMP_SOURCE",
+    "ENUM_NSYS_EVENT_CLASS",
+    "ENUM_NSYS_EVENT_TYPE",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_FLAGS",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_PROPERTY",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_TYPE",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_TYPE",
+    "ENUM_NSYS_GENERIC_EVENT_GROUP",
+    "ENUM_NSYS_GENERIC_EVENT_SOURCE",
+    "ENUM_OSRT_FILE_ACCESS_EVENT_TYPE",
+    "ENUM_SAMPLING_THREAD_STATE",
+    "ENUM_SCHEDULING_THREAD_BLOCK",
+    "ENUM_STACK_UNWIND_METHOD",
+    "META_DATA_CAPTURE",
+    "META_DATA_EXPORT",
+    "NVTX_EVENTS",
+    "OSRT_API",
+    "OSRT_CALLCHAINS",
+    "OSRT_FILE_ACCESS_DESCRIPTORS",
+    "OSRT_FILE_ACCESS_EVENTS",
+    "PROCESSES",
+    "PROFILER_OVERHEAD",
+    "ProcessStreams",
+    "StringIds",
+    "TARGET_INFO_CUDA_CONTEXT_INFO",
+    "TARGET_INFO_CUDA_DEVICE",
+    "TARGET_INFO_CUDA_STREAM",
+    "TARGET_INFO_GPU",
+    "TARGET_INFO_SESSION_START_TIME",
+    "TARGET_INFO_SYSTEM_ENV",
+    "ThreadNames"
+  ]
+}

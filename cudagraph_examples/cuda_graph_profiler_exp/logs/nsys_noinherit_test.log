@@ -1,0 +1,10 @@
+WARNING: The version of the system or its configuration does not allow enabling CPU profiling:
+- CPU IP/backtrace sampling will be disabled.
+- CPU context switch tracing will be disabled.
+Try the 'nsys status --environment' command to learn more.
+
+Collecting data...
+Generating '/tmp/nsys-report-7b97.qdstrm'
+[1/1] [0%                          ] noinherit.nsys-rep[1/1] [0%                          ] noinherit.nsys-rep[1/1] [===22%                      ] noinherit.nsys-rep[1/1] [=========45%                ] noinherit.nsys-rep[1/1] [=========46%                ] noinherit.nsys-rep[1/1] [=================73%        ] noinherit.nsys-rep[1/1] [========================100%] noinherit.nsys-rep[1/1] [========================100%] noinherit.nsys-rep
+Generated:
+	/home/ljj/Desktop/dingli/DebugInDistributed/cudagraph_examples/cuda_graph_profiler_exp/nsys/test_tmp/noinherit.nsys-rep

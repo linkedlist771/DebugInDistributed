@@ -1,0 +1,52 @@
+{
+  "csv_rows_in_window": 2,
+  "csv_total_rows": 337,
+  "cudaGraphLaunch_runtime_count": 1,
+  "cudaLaunchKernel_runtime_count": 2,
+  "cuda_graph_events_start_in_window": 0,
+  "cuda_graph_node_events_overlap_window": null,
+  "cuda_graph_node_events_start_in_window": null,
+  "cuda_graph_trace_events_overlap_window": 1,
+  "cuda_graph_trace_events_start_in_window": 1,
+  "graph_internal_kernel_count_in_window": 0,
+  "graph_internal_kernel_top_names_in_window": [],
+  "graph_launch_corr_ids": [
+    "6795"
+  ],
+  "host_kernel_count_in_window": 2,
+  "host_kernel_top_names_in_window": [
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<long>, at::detail::Array<char *, (int)1>>(int, T2, T3)",
+      2
+    ]
+  ],
+  "kernel_count_in_window": 2,
+  "kernel_top_names_in_window": [
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<long>, at::detail::Array<char *, (int)1>>(int, T2, T3)",
+      2
+    ]
+  ],
+  "runtime_top_names_in_window": [
+    [
+      "cudaStreamIsCapturing_v10000",
+      2
+    ],
+    [
+      "cudaLaunchKernel_v7000",
+      2
+    ],
+    [
+      "cudaGraphLaunch_v10000",
+      1
+    ],
+    [
+      "cudaDeviceSynchronize_v3020",
+      1
+    ]
+  ],
+  "window_duration_ns": 254675,
+  "window_end_ns": 1043580567,
+  "window_label": "PLAIN_ITER_0",
+  "window_start_ns": 1043325892
+}

@@ -1,0 +1,5 @@
+Generating SQLite file cuda_graph_profiler_exp/nsys/raw_tmp/run_D_graph_node.sqlite from cuda_graph_profiler_exp/nsys/raw_tmp/run_D_graph_node.nsys-rep
+Processing [cuda_graph_profiler_exp/nsys/raw_tmp/run_D_graph_node.sqlite] with [/opt/nvidia/nsight-systems/2025.6.1/host-linux-x64/reports/cuda_gpu_trace.py] to [cuda_graph_profiler_exp/nsys/run_D_graph_node_stats_cuda_gpu_trace.csv]... PROCESSED
+
+Processing [cuda_graph_profiler_exp/nsys/raw_tmp/run_D_graph_node.sqlite] with [/opt/nvidia/nsight-systems/2025.6.1/host-linux-x64/reports/cuda_api_trace.py] to [cuda_graph_profiler_exp/nsys/run_D_graph_node_stats_cuda_api_trace.csv]... PROCESSED
+
