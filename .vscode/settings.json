@@ -1,4 +1,28 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:conda",
-    "python-envs.defaultPackageManager": "ms-python.python:conda"
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda",
+  "files.associations": {
+    "*.cu": "cuda-cpp",
+    "*.cuh": "cuda-cpp"
+  },
+  "C_Cpp.autocomplete": "default",
+  "C_Cpp.intelliSenseEngine": "default",
+  "nsight.cuda.languageSupport.provider": "cpptools",
+  "nsight.cuda.languageSupport.autoConfigure": true,
+  "terminal.integrated.env.linux": {
+    "CUDA_HOME": "${workspaceFolder}/.venv/lib/python3.12/site-packages/nvidia/cu13",
+    "PATH": "${workspaceFolder}/.venv/lib/python3.12/site-packages/nvidia/cu13/bin:${env:PATH}"
+  },
+  "[cuda-cpp]": {
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    },
+    "editor.quickSuggestionsDelay": 10,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.suggest.showWords": true,
+    "editor.wordBasedSuggestions": "currentDocument"
+  }
 }

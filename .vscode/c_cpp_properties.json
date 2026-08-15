@@ -1,0 +1,38 @@
+{
+  "env": {
+    "torchInclude": "${workspaceFolder}/.venv/lib/python3.12/site-packages/torch/include",
+    "pythonInclude": "${env:HOME}/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12",
+    "cudaRoot": "${workspaceFolder}/.venv/lib/python3.12/site-packages/nvidia/cu13",
+    "cudaInclude": "${cudaRoot}/include"
+  },
+  "configurations": [
+    {
+      "name": "Linux CUDA (PyTorch)",
+      "compilerPath": "${cudaRoot}/bin/nvcc",
+      "compilerArgs": [
+        "-ccbin=/usr/bin/g++"
+      ],
+      "intelliSenseMode": "linux-gcc-x64",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${torchInclude}",
+        "${torchInclude}/torch/csrc/api/include",
+        "${pythonInclude}",
+        "${cudaInclude}"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "${torchInclude}",
+          "${torchInclude}/torch/csrc/api/include",
+          "${pythonInclude}",
+          "${cudaInclude}"
+        ],
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ],
+  "version": 4
+}
