@@ -16,3 +16,11 @@ dependencies = [
 [tool.pyright]
 reportPrivateImportUsage = "none"
 reportIncompatibleMethodOverride = "none"
+
+[dependency-groups]
+dev = [
+    "cuda-toolkit[nvcc]==13.0.2",
+    "nvidia-cuda-cccl>=13.0,<13.1",
+    "nvidia-cuda-crt==13.0.88",
+    "nvidia-nvvm==13.0.88",
+]
