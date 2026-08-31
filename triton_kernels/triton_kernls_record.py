@@ -1,0 +1,93 @@
+import tritonparse.structured_logging
+import tritonparse.parse.utils
+import os
+# os.environ["TRITONPARSE_KERNEL_ALLOWLIST"] = "vector_add_kernel*"  # 只追这个 kernel
+os.environ["TRITONPARSE_ANALYSIS"] = "none"                        # 跳过 IR 分析
+os.environ["TRITON_TRACE_COMPRESSION"] = "gzip"                    # 逐条 gzip
+
+# Initialize logging with full tracing options
+tritonparse.structured_logging.init(
+    "./logs/",
+    enable_trace_launch=True,                 # Capture kernel launch events (enables torch.compile tracing automatically)
+    enable_more_tensor_information=False,      # Optional: collect tensor statistics (min/max/mean/std)
+)
+
+# Your Triton/PyTorch code here
+
+import torch
+import triton.language as tl
+import triton
+from loguru import logger
+
+# ground truth as the golden
+def vector_add_torch(x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:
+    return x + y
+
+
+@triton.jit
+def vector_add_kernel(x_ptr, y_ptr, ret_ptr, numels, BLOCK_SIZE: tl.constexpr):
+
+    pid = tl.program_id(axis=0)
+
+    offsets = pid * BLOCK_SIZE + tl.arange(0, BLOCK_SIZE)
+
+    mask = offsets < numels
+
+    x = tl.load(x_ptr + offsets, mask)
+    y = tl.load(y_ptr + offsets, mask)
+
+    tl.store(ret_ptr + offsets, x+y, mask)    
+
+
+def vector_add_triton(x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:
+
+    BLOCK_SIZE = 1024
+
+    # we could have the inplace too
+    ret = torch.empty_like(x)
+    numels = x.numel()
+    # grid = (triton.cdiv(numels, BLOCK_SIZE), )
+    grid = lambda meta: (triton.cdiv(numels, meta['BLOCK_SIZE']), )
+    vector_add_kernel[grid](
+        x, y, ret, numels, BLOCK_SIZE
+    )
+
+
+    return ret
+
+
+
+
+    
+
+
+if __name__ == "__main__":
+    
+    # shape = (1026, 513)
+    # torch.manual_seed(42)
+    # x = torch.rand(size=shape, device="cuda")
+    # y = torch.rand(size=shape, device="cuda")
+    # gd = vector_add_torch(x, y)
+    # ret_triton = vector_add_triton(x, y)
+
+    # torch.testing.assert_close(gd, ret_triton)
+
+
+    # shape = (1026, 513)
+    shapes = []
+    for _x in range(1024, 1024 + 10):
+        for _y in range(512, 512 + 10):
+            shapes.append((_x, _y))
+    for shape in shapes:
+        torch.manual_seed(42)
+        x = torch.rand(size=shape, device="cuda")
+        y = torch.rand(size=shape, device="cuda")
+        gd = vector_add_torch(x, y)
+        ret_triton = vector_add_triton(x, y)
+
+        torch.testing.assert_close(gd, ret_triton)
+
+    # logger.debug()
+    
+# Parse and generate trace files
+tritonparse.parse.utils.unified_parse("./logs/", out="./parsed_output")
